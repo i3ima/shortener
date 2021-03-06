@@ -1,0 +1,18 @@
+mutation createUrl($url: String!) {
+  createUrl(url: $url) {
+    errors {
+      field
+      message
+    }
+    url {
+      id
+      url
+      short
+    }
+  }
+}
+type Url  {
+  id: number!
+  url: string!
+  short: string!
+}
